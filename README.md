@@ -58,10 +58,10 @@ mlflow server --host 127.0.0.1 --port 8090
 
 Для запуска обучения:
 ```bash
-cd src/email_assistant
+cd src/email_assistant/
 CUDA_VISIBLE_DEVICES=$DEVICE poetry run python train.py
 ```
-
+$DEVICE - номер устройства для запуска модели.
 ## Этапы обучения:
 
 - Загрузка архива писем (data.py)
