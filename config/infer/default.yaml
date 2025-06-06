@@ -1,0 +1,17 @@
+base_model_path: "ISTA-DASLab/Meta-Llama-3-8B-Instruct"
+adapter_path: "./experiments/final_lora_adapters"
+prompt: null
+input_file: "../../data/test.txt"
+output_file: "outputs/infer_results.csv"
+use_cache: false
+
+generation:
+  max_new_tokens: 256
+  temperature: 0.7
+
+quantization:
+  enabled: true
+  load_in_4bit: true
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "float16"

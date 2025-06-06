@@ -1,0 +1,19 @@
+model:
+  name: "ISTA-DASLab/Meta-Llama-3-8B-Instruct"
+  use_auth_token: true
+  max_new_tokens: 150
+  use_cache: false
+
+quantization:
+  load_in_4bit: true
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: float16
+
+data:
+  input_file: "../../data/emails.jsonl"
+  output_file: "../../data/summaries.jsonl"
+
+device: "cuda"
+
+prompt_file: "../../prompts/summarization_prompt.txt"

@@ -1,0 +1,5 @@
+outs:
+- md5: 00f8c954e0a926aad0ce1b8461eb980c
+  size: 76069
+  hash: md5
+  path: emails.jsonl

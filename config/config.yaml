@@ -1,0 +1,27 @@
+defaults:
+  - model: default
+  - data: default
+  - training: default
+  - _self_
+
+seed: 42
+
+output_dir: "./experiments"
+cache_dir: "./cache"
+
+log_level: "INFO"
+mlflow_logger:
+  experiment_name: "EMAIL_ASSISTANT"
+  output_log_dir: "logs/"
+  enabled: true
+  mlflow_tracking_uri: "http://127.0.0.1:8090"
+
+early_stopping:
+  monitor: "val_loss"
+  patience: 3
+  mode: "min"
+  verbose: true
+
+hydra:
+  run:
+    dir: ${output_dir}/${now:%Y-%m-%d_%H-%M-%S}

@@ -1,0 +1,15 @@
+Write a brief summary of the ORIGINAL letter in 1–3 sentences that conveys its main message. The summary should be in the form of an instruction, as if you are telling someone what to write IN THAT SAME letter. Use the imperative mood (verbs in command form).
+
+IMPORTANT:
+- The summary describes the CONTENT of the original letter, NOT a reply to it
+- Imagine it as instructions for recreating the original letter
+- Do NOT describe the tone, mood, or style of the letter
+- Do NOT use vague phrases like "describe the situation" or "explain the issue"
+- Include only specific actions, subjects, and events from the letter
+- Keep it short and to the point
+
+Email content: {email_body}
+
+Example of output: Thank for the relationship advice. Invite to meet tomorrow.
+
+Write only summary, do not add any extra words or explanation.

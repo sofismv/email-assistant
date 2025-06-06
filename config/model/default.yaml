@@ -1,0 +1,33 @@
+# Model configuration
+model_name_or_path: "ISTA-DASLab/Meta-Llama-3-8B-Instruct"
+config_name: null
+tokenizer_name: null
+model_revision: "main"
+use_auth_token: true
+use_fast_tokenizer: true
+
+# Quantization
+quantization:
+  enabled: true
+  load_in_4bit: true
+  bnb_4bit_use_double_quant: true
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_compute_dtype: "float16"
+
+# PEFT settings
+peft:
+  enabled: true
+  r: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  target_modules: ["q_proj", "v_proj", "k_proj"]
+  task_type: "CAUSAL_LM"
+
+# Generation
+generation:
+  temperature: 0.7
+  top_k: 50
+  top_p: 0.7
+  max_new_tokens: 256
+  do_sample: true
+  num_return_sequences: 1

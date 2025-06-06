@@ -1,0 +1,32 @@
+# Training configuration
+do_train: true
+do_eval: true
+do_predict: false
+
+# Training parameters
+num_train_epochs: 9
+per_device_train_batch_size: 2
+per_device_eval_batch_size: 2
+gradient_accumulation_steps: 4
+learning_rate: 8e-5
+weight_decay: 0.01
+warmup_ratio: 0.1
+lr_scheduler_type: "linear"
+
+# Mixed precision
+bf16: true
+fp16: false
+
+# Evaluation
+evaluation_strategy: "steps"
+check_val_every_n_epoch: 10
+save_strategy: "steps"
+save_steps: 200
+logging_steps: 30
+save_total_limit: 1
+load_best_model_at_end: true
+save_weights_only: true
+metric_for_best_model: "eval_loss"
+
+dataloader_num_workers: 47
+remove_unused_columns: false
