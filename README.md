@@ -32,7 +32,7 @@
 - Саммари генерируются автоматически базовой LLM
 
 # Setup
-
+Установка через conda окружение и poetry.
 ```bash
 conda create --name=email_assistant python=3.11.7
 conda activate email_assistant
