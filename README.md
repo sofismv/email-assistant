@@ -50,6 +50,13 @@ poetry install
 
 ## Установка и запуск
 
+Для запуска MLflow сервера для логирования:
+```bash
+mlflow server --host 127.0.0.1 --port 8090
+```
+Изменить адрес можно в config/config.yaml.
+
+Для запуска обучения:
 ```bash
 cd src/email_assistant
 CUDA_VISIBLE_DEVICES=$DEVICE poetry run python train.py
