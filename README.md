@@ -35,6 +35,7 @@
 ```bash
 conda create --name=email_assistant python=3.11.7
 conda activate email_assistant
+poetry install
 ```
 
 # Train
@@ -50,7 +51,6 @@ conda activate email_assistant
 
 ```bash
 cd src/email_assistant
-poetry install
 CUDA_VISIBLE_DEVICES=$DEVICE poetry run python train.py
 ```
 
