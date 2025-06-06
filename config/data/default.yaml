@@ -9,7 +9,6 @@ download_url: "https://raw.githubusercontent.com/IST-DASLab/PanzaMail/cca13ad6ad
 raw_data_path: "../../data/emails.jsonl"
 remote_path: "../../.dvcstore/"
 
-
 data:
   input_file: "../../data/summaries.jsonl"
   output_dir: "../../data/"
